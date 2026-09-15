@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task Management Application
 
 Full-stack task manager built with React, Vite, Node.js, Express, MongoDB Atlas, JWT and bcrypt.
@@ -55,3 +56,6 @@ Open the URL shown by Vite, normally http://localhost:5173.
 Build the frontend with `npm run build`. Deploy the server and frontend separately or configure Express to serve the `client/dist` folder.
 
 Never commit `.env` files.
+=======
+# taskmanagement
+>>>>>>> 1eae48426e04748f43af15b61a58ab6b3d5880df

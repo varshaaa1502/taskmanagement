@@ -1,0 +1,124 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+button, input, textarea, select { font: inherit; }
+
+button { cursor: pointer; }
+
+.navbar {
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #e7eaf0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.brand { font-size: 22px; font-weight: 800; display: flex; gap: 10px; align-items: center; }
+.brand-mark, .auth-logo {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: #5b5bd6; color: white; display: grid; place-items: center; font-weight: 900;
+}
+.nav-user { display: flex; align-items: center; gap: 18px; font-size: 14px; }
+
+.btn {
+  border: 0; border-radius: 9px; padding: 10px 15px; font-weight: 700;
+  transition: .2s; background: #eef0f6; color: #30374a;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: #5b5bd6; color: white; }
+.btn-primary:hover { background: #4e4ec4; }
+.btn-ghost { background: transparent; border: 1px solid #e0e3eb; }
+.btn-small { padding: 7px 12px; font-size: 13px; }
+.full { width: 100%; }
+
+.auth-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: linear-gradient(135deg, #f4f4ff, #f7f9fc); }
+.auth-card {
+  width: min(420px, 100%); background: white; padding: 38px;
+  border: 1px solid #e4e7ef; border-radius: 20px; box-shadow: 0 18px 50px rgba(30,35,70,.08);
+}
+.auth-logo { margin-bottom: 20px; width: 48px; height: 48px; border-radius: 14px; font-size: 21px; }
+.auth-card h1 { margin: 0 0 8px; font-size: 30px; }
+.muted { color: #737b8d; }
+.auth-card form { display: grid; gap: 17px; margin-top: 24px; }
+.auth-card label, .task-form label { display: grid; gap: 7px; font-weight: 700; font-size: 13px; color: #42495a; }
+input, textarea, select {
+  width: 100%; border: 1px solid #dfe3eb; border-radius: 9px;
+  padding: 11px 12px; background: white; color: #1b2233; outline: none;
+}
+input:focus, textarea:focus, select:focus { border-color: #7777df; box-shadow: 0 0 0 3px rgba(91,91,214,.1); }
+.switch { text-align: center; font-size: 14px; margin-bottom: 0; }
+.switch a { color: #5656ce; font-weight: 700; text-decoration: none; }
+.error { background: #fff0f0; border: 1px solid #ffd0d0; color: #b72e2e; padding: 11px 13px; border-radius: 9px; margin-top: 18px; font-size: 14px; }
+
+.dashboard { max-width: 1250px; margin: auto; padding: 42px 24px 70px; }
+.welcome { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.eyebrow { color: #5b5bd6; font-size: 11px; letter-spacing: .14em; font-weight: 900; margin: 0 0 7px; }
+.welcome h1 { margin: 0; font-size: 34px; }
+.stat { background: white; border: 1px solid #e4e7ef; border-radius: 14px; padding: 15px 22px; text-align: center; min-width: 110px; }
+.stat strong { display: block; font-size: 25px; }
+.stat span { color: #7a8292; font-size: 12px; }
+
+.dashboard-grid { display: grid; grid-template-columns: 340px 1fr; gap: 25px; align-items: start; }
+.task-form, .tasks-panel { background: white; border: 1px solid #e4e7ef; border-radius: 16px; }
+.task-form { padding: 22px; display: grid; gap: 17px; position: sticky; top: 20px; }
+.form-heading { display: flex; justify-content: space-between; gap: 10px; align-items: start; }
+.form-heading h2 { margin: 0 0 5px; font-size: 19px; }
+.form-heading p { margin: 0; color: #7b8290; font-size: 12px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.tasks-panel { min-height: 500px; overflow: hidden; }
+.toolbar { padding: 17px; border-bottom: 1px solid #eceef3; display: grid; gap: 14px; }
+.search { max-width: 400px; }
+.filters { display: flex; gap: 7px; flex-wrap: wrap; }
+.filter { border: 0; background: transparent; padding: 7px 10px; color: #72798a; border-radius: 7px; font-size: 13px; }
+.filter.active { background: #eeeeff; color: #4e4ec8; font-weight: 800; }
+.filter span { margin-left: 4px; opacity: .7; }
+
+.task-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 13px; padding: 17px; }
+.task-card { border: 1px solid #e5e7ed; border-radius: 13px; padding: 17px; min-width: 0; }
+.task-card.is-complete { opacity: .72; }
+.task-top { display: flex; justify-content: space-between; align-items: center; }
+.priority, .status { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; font-weight: 900; }
+.priority { padding: 5px 8px; border-radius: 5px; background: #f0f1f5; }
+.priority.high { background: #ffe8e8; color: #bd3a3a; }
+.priority.medium { background: #fff4db; color: #a16a00; }
+.priority.low { background: #e8f7ed; color: #29814b; }
+.icon-btn { border: 0; background: transparent; font-size: 23px; line-height: 1; color: #9aa0ad; }
+.task-card h3 { margin: 16px 0 7px; font-size: 17px; overflow-wrap: anywhere; }
+.task-card p { color: #747c8d; font-size: 13px; line-height: 1.5; min-height: 20px; }
+.task-meta { display: flex; justify-content: space-between; gap: 8px; align-items: center; color: #818898; font-size: 11px; margin: 17px 0; }
+.status { padding: 5px 8px; border-radius: 5px; background: #f0f1f5; }
+.status.in-progress { background: #e9efff; color: #4566bb; }
+.status.completed { background: #e5f6ea; color: #2e8049; }
+.task-actions { display: flex; gap: 8px; }
+.task-actions select { flex: 1; padding: 7px 9px; font-size: 12px; }
+.empty { min-height: 390px; display: grid; place-content: center; text-align: center; color: #777f90; padding: 40px; }
+.empty h3 { color: #343b4c; margin: 8px 0 5px; }
+.empty p { margin: 0; font-size: 13px; }
+.empty-icon { margin: auto; width: 45px; height: 45px; border-radius: 50%; display: grid; place-items: center; background: #eeeeff; color: #5757d1; font-weight: 900; }
+
+@media (max-width: 900px) {
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .task-form { position: static; }
+}
+
+@media (max-width: 650px) {
+  .navbar { padding: 0 18px; }
+  .nav-user span { display: none; }
+  .dashboard { padding: 28px 14px 50px; }
+  .welcome { align-items: start; gap: 15px; }
+  .welcome h1 { font-size: 28px; }
+  .stat { min-width: 85px; padding: 10px; }
+  .task-list { grid-template-columns: 1fr; padding: 12px; }
+  .auth-card { padding: 27px 21px; }
+}
